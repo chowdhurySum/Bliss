@@ -4,32 +4,28 @@
 
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#FF330000"
-
-
-
+    android:background="#d2f19a"
 
     tools:context="com.example.sumitra.myapplication.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
     <ListView
         android:id="@+id/song_list"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:divider="#FFFFFF"
+        android:dividerHeight="0.1dp">
 
     </ListView>
-    <menu xmlns:android="http://schemas.android.com/apk/res/android">
-        <item
-            android:id="@+id/action_shuffle"
-            android:icon="@drawable/rand"
-            android:orderInCategory="1"
-            android:showAsAction="always"
-            android:title="Shuffle" />
-        <item
-            android:id="@+id/action_end"
-            android:icon="@drawable/end"
-            android:orderInCategory="2"
-            android:showAsAction="always"
-            android:title="End" />
-    </menu>
 </LinearLayout>
